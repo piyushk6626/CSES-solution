@@ -14,6 +14,6 @@ else:
         edge = (i*i - 4) * ((i*i) - ((i-1)*(i-1)) - 12)
         mid_sqr_corner = (i*i - 4) * 4
         mid_edge = (i*i - 6) * (((i-1)*(i-1)) - ((i-2)*(i-2)) - 4)
-        mid_sqr = (i*i - 8) * ((i-2)*(i-2))
+        mid_sqr = (i*i - 8) * ((i-4)*(i-4))
         ans = (corner + ad_corner + edge + mid_sqr_corner + mid_edge + mid_sqr) // 2
         print(ans)
