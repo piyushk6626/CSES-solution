@@ -1,8 +1,7 @@
 def two_knights(n):
     ways = (n**4 - 9 * n**2 + 24 * n) // 2
     return ways
-
-# Example usage
-n = 8  # Change this to the desired chessboard size
-result = two_knights(n)
-print(result)
+n=int(input())
+for i in range(1,n+1):
+    result = two_knights(i)
+    print(result)
