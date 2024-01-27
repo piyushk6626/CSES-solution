@@ -62,5 +62,3 @@ def main():
         print("NO SOLUTION")
         
 main()    
-    #for element, count in element_counts.items():
-    #    print(f"{element}: {count}")
