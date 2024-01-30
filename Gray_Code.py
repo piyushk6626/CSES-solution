@@ -2,18 +2,41 @@ def int_to_binary(num,width):
     
     binary_result = format(num, f'0{width}b')
     
-    return binary_result
-def printing(arr):
-    result = ''.join(map(str, arr))
-    print(result)
+    print(binary_result)
+
+def is_power_of_two(number):
+  
+    return number > 0 and (number & (number - 1)) == 0
 
 n=int(input())
-A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16=2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,131072
-ans=[0]*n
-k=0
-for i in range(int(pow(2,n))):
-    printing(ans)
-    if k>(A1-1): 
+Max=int(pow(2,n))
+Ans=[0,1]
+
+K=2
+J=1
+num=1
+
+while(K <Max):
+    if is_power_of_two(K):
+        num=num+K
+        Ans.append(num)
+        K=K+1
+    else:
+        while(J>0):
+            DIFF=Ans[J]-Ans[J-1]
+            num-=DIFF
+            Ans.append(num)
+            J=J-1
+            K=K+1
+        J=len(Ans)-1    
+
+for number in Ans:
+    int_to_binary(number,n)
+
+    
+        
+    
+    
     
 
     
